@@ -12,7 +12,7 @@ module.exports = {
      * }], {});
     */
 
-    await queryInterface.bulkInsert('participas', [
+    await queryInterface.bulkInsert('Participas', [
       {
         id_personaje: 1,
         id_pelicula_serie: 1,
@@ -129,6 +129,6 @@ module.exports = {
      * await queryInterface.bulkDelete('People', null, {});
      */
 
-      return queryInterface.bulkDelete('participas', null, {});
+      return queryInterface.bulkDelete('Participas', null, {});
   }
 };

@@ -11,7 +11,7 @@ module.exports = {
      *   isBetaMember: false
      * }], {});     
     */
-    await queryInterface.bulkInsert('generos', [
+    await queryInterface.bulkInsert('Generos', [
       {
         nombre: "Animación",
         imagen: "https://upload.wikimedia.org/wikipedia/commons/8/87/Animated_GIF_from_the_1919_Feline_folies_by_Pat_Sullivan.gif",
@@ -63,6 +63,6 @@ module.exports = {
      * Example:
      * await queryInterface.bulkDelete('People', null, {});
      */
-     return queryInterface.bulkDelete('generos', null, {});
+     return queryInterface.bulkDelete('Generos', null, {});
   }
 };

@@ -12,7 +12,7 @@ module.exports = {
      * }], {});
     */
 
-    return queryInterface.bulkInsert('peliculaSeries', [
+    return queryInterface.bulkInsert('PeliculaSeries', [
     {
       titulo: "Fantasía",
       imagen: "https://static.wikia.nocookie.net/disney/images/d/d3/Fantasia.png/revision/latest?cb=20140712091125&path-prefix=es",
@@ -107,6 +107,6 @@ module.exports = {
      * Example:
      * await queryInterface.bulkDelete('People', null, {});
      */
-     return queryInterface.bulkDelete('peliculaSeries', null,{});
+     return queryInterface.bulkDelete('PeliculaSeries', null,{});
   }
 };

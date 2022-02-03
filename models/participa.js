@@ -21,7 +21,11 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   Participa.init({
-    id: DataTypes.INTEGER,
+    id: {
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+
+    },
     id_pelicula_serie: DataTypes.INTEGER,
     id_personaje: DataTypes.INTEGER
   }, {

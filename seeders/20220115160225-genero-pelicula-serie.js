@@ -12,7 +12,7 @@ module.exports = {
      * }], {});
     */
     
-    return queryInterface.bulkInsert('generopeliculaseries', [
+    return queryInterface.bulkInsert('GeneroPeliculaSeries', [
       {
         id_pelicula_serie: 1,
         id_genero: 1,
@@ -104,6 +104,6 @@ module.exports = {
      * Example:
      * await queryInterface.bulkDelete('People', null, {});
      */
-     return queryInterface.bulkDelete('generopeliculaseries', null, {});
+     return queryInterface.bulkDelete('GeneroPeliculaSeries', null, {});
   }
 };

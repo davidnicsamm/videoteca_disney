@@ -34,7 +34,11 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   PeliculaSerie.init({
-    id: DataTypes.INTEGER,
+    id: {
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+
+    },
     titulo: DataTypes.STRING,
     imagen: DataTypes.STRING,
     fecha_creacion: DataTypes.DATE,
