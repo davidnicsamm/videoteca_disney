@@ -14,7 +14,8 @@ module.exports = {
         references: {
           model: 'PeliculaSeries',
           key: 'id'
-        }
+        },
+        unique: 'campo_unico'
       },
       id_genero: {
         allowNull: false,
@@ -22,7 +23,8 @@ module.exports = {
         references: {
           model: 'Generos',
           key: 'id'
-        }
+        },
+        unique: 'campo_unico'
       },
       createdAt: {
         allowNull: false,
@@ -31,6 +33,14 @@ module.exports = {
       updatedAt: {
         allowNull: false,
         type: Sequelize.DATE
+      }
+    },
+    
+    {
+      uniqueKeys: {
+          campo_unico: {
+              fields: ['id_pelicula_serie', 'id_genero']
+          }
       }
     });
   },

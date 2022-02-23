@@ -26,8 +26,13 @@ module.exports = (sequelize, DataTypes) => {
       primaryKey: true,
     },
     id_pelicula_serie: DataTypes.INTEGER,
-    id_genero: DataTypes.INTEGER
-  }, {
+    id_genero: DataTypes.INTEGER,
+
+   
+  }, 
+  
+  
+  {
     sequelize,
     modelName: 'GeneroPeliculaSerie',
   });

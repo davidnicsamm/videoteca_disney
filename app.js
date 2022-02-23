@@ -33,7 +33,7 @@ app.use('/characters', personajeRouter);
 app.use('/movies', peliculaSerieRouter);
 app.use('/participates',participaRouter);
 app.use('/genres',generoRouter);
-app.use('/genreps/', generoPSRouter);
+app.use('/genres-ps/', generoPSRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

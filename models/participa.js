@@ -26,9 +26,18 @@ module.exports = (sequelize, DataTypes) => {
       primaryKey: true,
 
     },
-    id_pelicula_serie: DataTypes.INTEGER,
-    id_personaje: DataTypes.INTEGER
-  }, {
+    id_pelicula_serie: { 
+      type: DataTypes.INTEGER, 
+      unique: 'unique_tag'
+    
+    },
+    id_personaje: { 
+      type: DataTypes.INTEGER,
+      unique: 'unique_tag'      
+    }
+  }, 
+  
+  {
     sequelize,
     modelName: 'Participa',
   });
