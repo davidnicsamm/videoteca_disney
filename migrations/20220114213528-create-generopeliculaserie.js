@@ -1,7 +1,7 @@
 'use strict';
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.createTable('generopeliculaseries', {
+    await queryInterface.createTable('GeneroPeliculaSeries', {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -12,17 +12,19 @@ module.exports = {
         allowNull: false,
         type: Sequelize.INTEGER,
         references: {
-          model: 'peliculaSeries',
+          model: 'PeliculaSeries',
           key: 'id'
-        }
+        },
+        unique: 'campo_unico'
       },
       id_genero: {
         allowNull: false,
         type: Sequelize.INTEGER,
         references: {
-          model: 'generos',
+          model: 'Generos',
           key: 'id'
-        }
+        },
+        unique: 'campo_unico'
       },
       createdAt: {
         allowNull: false,
@@ -32,9 +34,17 @@ module.exports = {
         allowNull: false,
         type: Sequelize.DATE
       }
+    },
+    
+    {
+      uniqueKeys: {
+          campo_unico: {
+              fields: ['id_pelicula_serie', 'id_genero']
+          }
+      }
     });
   },
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('generopeliculaseries');
+    await queryInterface.dropTable('GeneroPeliculaSeries');
   }
 };

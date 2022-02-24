@@ -21,10 +21,18 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   GeneroPeliculaSerie.init({
-    id: DataTypes.INTEGER,
+    id: {
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+    },
     id_pelicula_serie: DataTypes.INTEGER,
-    id_genero: DataTypes.INTEGER
-  }, {
+    id_genero: DataTypes.INTEGER,
+
+   
+  }, 
+  
+  
+  {
     sequelize,
     modelName: 'GeneroPeliculaSerie',
   });

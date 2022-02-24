@@ -23,13 +23,18 @@ module.exports = (sequelize, DataTypes) => {
 
     }
   };
-  G.init({
-    id: DataTypes.INTEGER,
+
+  Genero.init({
+    id: {
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+
+    },
     nombre: DataTypes.STRING,
     imagen: DataTypes.STRING
   }, {
     sequelize,
-    modelName: 'G',
+    modelName: 'Genero',
   });
-  return G;
+  return Genero;
 };

@@ -1,7 +1,7 @@
 'use strict';
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.createTable('participas', {
+    await queryInterface.createTable('Participas', {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -12,18 +12,20 @@ module.exports = {
         allowNull: false,
         type: Sequelize.INTEGER,
         references: {
-          model: 'peliculaSeries',
+          model: 'PeliculaSeries',
           key: 'id'
-        }
+        },
+        unique: "campo_unico"
         
       },
       id_personaje: {
         allowNull: false,
         type: Sequelize.INTEGER,
         references: {
-          model: 'personajes',
+          model: 'Personajes',
           key: 'id'
-        }
+        },
+        unique: "campo_unico"
       },
       createdAt: {
         allowNull: false,
@@ -33,9 +35,17 @@ module.exports = {
         allowNull: false,
         type: Sequelize.DATE
       }
+    },
+    
+    {
+      uniqueKeys: {
+          campo_unico: {
+              fields: ['id_pelicula_serie', 'id_personaje']
+          }
+      }
     });
   },
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('participas');
+    await queryInterface.dropTable('Participas');
   }
 };

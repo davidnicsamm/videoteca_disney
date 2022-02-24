@@ -12,7 +12,7 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
       this.belongsToMany(models.PeliculaSerie,{
-        throgh: 'Participa',
+        through: 'Participa',
         as: 'participaciones',
         foreignKey: 'id_personaje'
       }),
@@ -23,7 +23,11 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   Personaje.init({
-    id: DataTypes.INTEGER,
+    id: {
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+
+    },
     nombre: DataTypes.STRING,
     imagen: DataTypes.STRING,
     edad: DataTypes.INTEGER,
