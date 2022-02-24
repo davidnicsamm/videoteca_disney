@@ -1,6 +1,5 @@
-# videoteca_disney
-# API sin LOGIN de usuarios
-# URL de la documentación: https://documenter.getpostman.com/view/11922185/UVkpNaqN
+API sin LOGIN de usuarios
+URL de la documentación: https://documenter.getpostman.com/view/11922185/UVkpNaqN
 API con Express, NodeJs, Sequelize y MySQL que realiza CRUD de películas y series de Disney. Realizado para la aceleraión Alkemy 
 
 CHALLENGE BACKEND - NodeJs
