@@ -1,11 +1,11 @@
+
+
+##CHALLENGE BACKEND - NodeJs
+###Objetivo
+
 API sin LOGIN de usuarios
 
 URL de la documentación: https://documenter.getpostman.com/view/11922185/UVkpNaqN
-
-API con Express, NodeJs, Sequelize y MySQL que realiza CRUD de películas y series de Disney. Realizado para la aceleraión Alkemy 
-
-CHALLENGE BACKEND - NodeJs
-Objetivo
 
 Desarrollar una API para explorar el mundo de Disney, la cual permitirá conocer y modificar los personajes que lo componen y entender en qué películas estos participaron. Por otro lado, deberá exponer la información para que cualquier frontend pueda consumirla.
 
